@@ -1,0 +1,159 @@
+body{
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+}
+
+.game-container{
+  width: 100%;
+  height: 730px;
+  position: absolute;
+}
+
+.border-left{
+  width: 10px;
+  height: 790px;
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+  left: 0px;
+}
+
+.border-right{
+  width: 10px;
+  height: 790px;
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+  right: 0px;
+}
+
+.border-top{
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  background-color: white;
+  z-index: +2;
+  top: -50px;
+}
+
+.sky{
+  background-image: url('flappyscene-bg.png');
+  width: 3000px;
+  height: 580px;
+  position: absolute;
+}
+
+.ground{
+  background-image: url('flappybottom-bg.png');
+  width: 3000px;
+  height: 150px;
+  position: absolute;
+  top: 580px;
+  z-index: +1;
+}
+
+.bird{
+  background-image: url('flappy-bird.png');
+  position: absolute;
+  width: 60px;
+  height: 45px;
+  bottom: 20px;
+}
+
+.glitch-effect {
+  animation: glitch-animation 0.09s infinite alternate;
+}
+
+@keyframes glitch-animation {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(2px, -2px);
+  }
+  50% {
+    transform: translate(-2px, 2px);
+  }
+  75% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+
+.game-over-container{
+  position:absolute;
+  top:20%;
+  z-index: 10;
+  width: 200px;
+  right: 40%;
+}
+
+.game-over-container img{
+  position:absolute;
+  z-index: 10;
+  width: 100%;
+}
+
+.obstacle{
+  background-image: url('flappybird-pipe.png');
+  width: 60px;
+  height: 300px;
+  position: absolute;
+}
+
+.topObstacle{
+  background-image: url('flappybird-pipe.png');
+  transform: rotate(180deg);
+  width: 60px;
+  height: 300px;
+  position: absolute;
+}
+
+@keyframes slideright{
+  from{
+    background-position: 10000%;
+  }
+  to{
+    background-position: 0%
+  }
+}
+
+.ground-container{
+  height: 150px;
+  width: 3000px;
+  position: absolute;
+}
+
+.ground-moving{
+  position: absolute;
+  top: 580px;
+  height: 150px;
+  background-image: url('flappybottom-bg.png');
+  background-repeat: repeat-x;
+  animation: slideright 100s infinite linear;
+  -webkit-animation: slideright 100s infinite linear;
+  width: 100%;
+  z-index: +1;
+}
+
+.score {
+  position:absolute;
+  top: 10px;
+  left: 20px;
+  color: black;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.life {
+  position:absolute;
+  top: 40px;
+  left: 20px;
+  color: black;
+  font-size: 24px;
+  z-index: 10;
+}
