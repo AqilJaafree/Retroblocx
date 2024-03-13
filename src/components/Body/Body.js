@@ -1,5 +1,7 @@
 import React from 'react'
 import './Body.css';
+import { Link } from "react-router-dom";
+
 
 const Body = () => {
   return (
@@ -7,11 +9,30 @@ const Body = () => {
       <h1>Body</h1>
       <div className="image-container">
         <a
-          href="https://example.com/page1"
+          href="https://example.com/page2"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="image1.jpg" alt="Sample Image 1" />
+          <img src="image2.jpg" alt="Sample Image 2" />
+        </a>
+        <a
+          href="https://example.com/page2"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
+        <a
+          href="https://example.com/page2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="image2.jpg" alt="Sample Image 2" />
+        </a>
+        <a
+          href="https://example.com/page2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="image2.jpg" alt="Sample Image 2" />
         </a>
         <a
           href="https://example.com/page2"
