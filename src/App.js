@@ -9,6 +9,7 @@ import {
 import Home from "../src/components/pages/Home"
 import Snakegame from "./components/games/Snakegame/Snakegame";
 import Flappygame from "./components/games/flappybird/Flappygame";
+import MemoryGame from "./components/games/memorycard/MemoryGame";
 //navbar
 import Navbar from "./components/Navbar/Navbar";
 
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="Snakegame" element={<Snakegame />} />
       <Route path="Flappybird" element={<Flappygame />} />
+      <Route path="Memorycard" element={<MemoryGame />} />
     </Route>
   )
 );

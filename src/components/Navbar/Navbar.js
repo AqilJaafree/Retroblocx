@@ -17,6 +17,12 @@ export default function Navbar() {
             <li>
               <NavLink to="Flappybird">Flappy Bird</NavLink>
             </li>
+            <li>
+              <NavLink to="Memorycard">Memory Card</NavLink>
+            </li>
+            <li>
+              <NavLink to="Flappybird">Flappy Bird</NavLink>
+            </li>
           </ul>
         </nav>
       </header>
