@@ -1,0 +1,20 @@
+.body{
+    background-color: #0C2D57;
+    align-items: center;
+    height: 60rem;
+}
+
+.body h1{
+    padding: 80px;
+    color: #fff;
+    text-align: center;
+    font-size: 5rem;
+}
+
+.body p{
+    color: #fff;
+    display: flex;
+    text-align: center;
+    padding: 50px;
+    font-size: 1.4rem;
+}
