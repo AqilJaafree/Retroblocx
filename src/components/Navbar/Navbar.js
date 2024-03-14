@@ -15,6 +15,9 @@ export default function Navbar() {
               <NavLink to="Snakegame">Snake Game</NavLink>
             </li>
             <li>
+              <NavLink to="CashQuest">Cash Quest</NavLink>
+            </li>
+            <li>
               <NavLink to="about">About</NavLink>
             </li>
           </ul>

@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";  
 import Home from "../src/components/pages/Home"
 import Snakegame from "../src/components/games/Snakegame/Snakegame";
+import CashQuest from "../src/components/games/cash-quest/cash-quest/CreationContainer";
 //navbar
 import Navbar from "./components/Navbar/Navbar";
 
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Navbar />}>
       <Route index element={<Home />} />
       <Route path="Snakegame" element={<Snakegame />} />
+      <Route path="CashQuest" element={<CashQuest />} />
     </Route>
   )
 );
