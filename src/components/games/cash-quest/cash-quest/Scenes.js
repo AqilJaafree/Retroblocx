@@ -53,56 +53,53 @@ export var Scenes = {
 			},
 			(game) => {
 				if (game.race === "Undead") {
-					this.showButton=false;
-					return this.showButton;
+					return false;
 				} else {
-					this.showButton=true;
-					return this.showButton;
+					return true;
 				}
 			}
 		),
-		new LevelButton("Don't drink...anymore", (game) => {
-			game.nextLevel(Scenes.Been_Clean);
+		new LevelButton("Don't drink...anymore",
+			(game) => {
+				game.nextLevel(Scenes.Been_Clean);
 			},
 			(game) => {
 				if (game.race === "Undead") {
-					this.showButton=false;
-					return this.showButton;
+					return false;
 				} else {
-					this.showButton=true;
-					return this.showButton;
+					return true;
 				}
 			}
 		),
-		new LevelButton("Had one too many", (game) => {
-			game.nextLevel(Scenes.Bad_Choices);
+		new LevelButton("Had one too many",
+			(game) => {
+				game.nextLevel(Scenes.Bad_Choices);
 			},
 			(game) => {
 				if (game.race === "Undead") {
-					this.showButton=false;
-					return this.showButton;
+					return false;
 				} else {
-					this.showButton=true;
-					return this.showButton;
+					return true;
 				}
 			}
 		),
-		new LevelButton("Gather bearings", (game) => {
-			game.nextLevel(Scenes.Condition);
+		new LevelButton("Gather bearings",
+			(game) => {
+				game.nextLevel(Scenes.Condition);
 			},
 			(game) => {
 				if (game.race === "Undead") {
-					this.showButton=true;
-					return this.showButton;
+					return true;
 				} else {
-					this.showButton=false;
-					return this.showButton;
+					return false;
 				}
 			}
 		),
-		new LevelButton("Onward to adventure!", (game) => {
-			game.nextLevel(Scenes.Outside_Now);
-		}),
+		new LevelButton("Onward to adventure!",
+			(game) => {
+				game.nextLevel(Scenes.Outside_Now);
+			}
+		),
 	], [['img', 'startercave.jpg']]),
 
 
@@ -254,59 +251,56 @@ export var Scenes = {
 			return text;
 		}
 	}, [
-		new LevelButton('Attack', (game) => {
-			game.nextLevel(Scenes.Fight1);
-			game.froggo(8);
-			game.critical();
-		},
+		new LevelButton('Attack', 
+			(game) => {
+				game.nextLevel(Scenes.Fight1);
+				game.froggo(8);
+				game.critical();
+			},
 			(game) => {
 				if (Scenes.Fight1.playerVisitedCounter === 5) {
-					this.showButton=false;
-					return this.showButton;
+					return false;
 				} else {
-					this.showButton=true;
-					return this.showButton;
+					return true;
 				}
 			}
 		),
-		new LevelButton('Defend', (game) => {
-			game.nextLevel(Scenes.Fight1);
-			game.froggo(2);
-		},
-		(game) => {
+		new LevelButton('Defend', 
+			(game) => {
+				game.nextLevel(Scenes.Fight1);
+				game.froggo(2);
+			},
+			(game) => {
 				if (Scenes.Fight1.playerVisitedCounter === 5) {
-					this.showButton=false;
-					return this.showButton;
+					return false;
 				} else {
-					this.showButton=true;
-					return this.showButton;
+					return true;
 				}
 			}
 		),
-		new LevelButton('Go to town shop', (game) => {
-			game.nextLevel(Scenes.Shop);
-			game.receiveMoney();
-		},
-		(game) => {
+		new LevelButton('Go to town shop', 
+			(game) => {
+				game.nextLevel(Scenes.Shop);
+				game.receiveMoney();
+			},
+			(game) => {
 				if (Scenes.Fight1.playerVisitedCounter === 5) {
-					this.showButton=true;
-					return this.showButton;
+					return true;
 				} else {
-					this.showButton=false;
-					return this.showButton;
+					return false;
 				}
 			}
-		)
+		),
 	], [['img', 'fight.gif']]),
 
 	Shop: new Scene('Town Shop', (game) =>{
-		let text = "You only got $5 from slaying that frog and the shop is selling a record and a detonator for $5 each. Gerald... Which should you buy?";
+		let text = "You only got $5 from slaying that frog and the shop is selling a detonator for $5. Gerald... Which should you buy?";
 		return text;
 	}, [
-		new LevelButton('Buy record', (game) => {
-			game.nextLevel(Scenes.Bought);
-			game.boughtRecord();
-		}),
+		// new LevelButton('Buy record', (game) => {
+		// 	game.nextLevel(Scenes.Bought);
+		// 	game.boughtRecord();
+		// }),
 		new LevelButton("Buy detonator", (game) => {
 			game.nextLevel(Scenes.Bought);
 			game.boughtDet();
@@ -390,9 +384,9 @@ export var Scenes = {
 		let text = "You won!";
 		return text;
 	}, [
-		new LevelButton("Replay?", (game) => {
-			game.nextLevel(Scenes.Cave);
-		})
+		new LevelButton("Home Screen" , ()=> {
+			window.location.reload();
+		}),
 		], [['text', 'Thanks for Playing']]),
 
 };

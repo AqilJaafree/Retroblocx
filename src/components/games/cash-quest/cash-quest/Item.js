@@ -125,19 +125,19 @@ export class Detonator extends Component {
 		}
 }
 
-export class Record extends Component {
+// export class Record extends Component {
 
-	render(){
-		return(
-			<StyledBox
-				id = 'record'>
-				<img src = {require('../item-images/2260-0.png')} alt= " "/>
-			 <h1>
-				Record x {this.props.Record}
-			 </h1>
-			 <input className = 'button' type = 'button' value = 'Use' onClick={'#'}/>
-			 <input className = 'button' type = 'button' value = 'Throw Away' />
-			</StyledBox>
-		)
-	}
-}
+// 	render(){
+// 		return(
+// 			<StyledBox
+// 				id = 'record'>
+// 				<img src = {require('../item-images/2260-0.png')} alt= " "/>
+// 			 <h1>
+// 				Record x {this.props.Record}
+// 			 </h1>
+// 			 <input className = 'button' type = 'button' value = 'Use' onClick={'#'}/>
+// 			 <input className = 'button' type = 'button' value = 'Throw Away' />
+// 			</StyledBox>
+// 		)
+// 	}
+// }

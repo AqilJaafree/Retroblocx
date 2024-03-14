@@ -14,7 +14,7 @@ class CreateCharacter extends Component {
 			Race: '',
 			Gender: '',
 			wallet : 0,
-			isBlinking : true,
+			isBlinking : false,
 			isGameHidden : true,
 			isInventoryHidden : true,
 			isEquipmentHidden : true,
@@ -29,7 +29,6 @@ class CreateCharacter extends Component {
 			Fish : 1,
 			Explosives : 2,
 			Detonator : 0,
-			Record : 0,
 			equippedWeaponImage : '',
 			equippedWeaponName : '',
 			equippedArmorImage : '',
@@ -39,8 +38,9 @@ class CreateCharacter extends Component {
 			enemyLife: 100
 		};
 
-		this.blinky = this.blinky.bind(this);
-		this.handleKeyPress = this.handleKeyPress.bind(this);
+		// this.blinky = this.blinky.bind(this);
+		this.handleStartClick = this.handleStartClick.bind(this);
+		// this.handleKeyPress = this.handleKeyPress.bind(this);
 		this.handleChangeName = this.handleChangeName.bind(this);
 		this.chooseRace = this.chooseRace.bind(this);
 		this.changeGender = this.changeGender.bind(this);
@@ -65,10 +65,7 @@ class CreateCharacter extends Component {
 		this.detonateExplosives = this.detonateExplosives.bind(this);
 	};
 
-	componentDidMount(){
-		window.addEventListener('keypress', this.handleKeyPress);
-    	document.title = "Petty Cash Quest";
-	}
+
 
 	render(){
 		return(
@@ -76,16 +73,16 @@ class CreateCharacter extends Component {
 			<div
 				className = 'CreateCharacter'
 				>
-			<h1>Create Character</h1>
+			<h1 style={{textAlign: 'center'}}>Create Character</h1><br/><br/>
 			<label>Character Name :</label>
-			<input type = 'text' value={this.state.playerName} onChange = {this.handleChangeName} /><br/>
+			<input type = 'text' value={this.state.playerName} onChange = {this.handleChangeName} /><br/><br/>
 			<label>Race : </label><input list='races' name='availableRaces' onChange={this.chooseRace}/>
 				<datalist id="races">
     				<option value="Human">Human</option>
     				<option value="Undead">Undead</option>
     				<option value="Elf">Elf</option>
     				<option value="Orc">Orc</option>
-  				</datalist> <br/>
+  				</datalist> <br/><br/>
 
 			<label>Gender :</label><input list='genders' name='availableGenders' onChange = {this.changeGender} />
 				<datalist id='genders'>
@@ -97,9 +94,10 @@ class CreateCharacter extends Component {
 			<div
 				id  = 'blinker'
 				className = {this.state.isBlinking ? 'hide' : 'view'}
-				onLoad={this.blinky()}
+				onClick={this.handleStartClick}
+				
 				>
-				PRESS ENTER
+				CLICK TO START
 			</div>
 			
 			<GameContainer
@@ -154,21 +152,19 @@ class CreateCharacter extends Component {
 			</div>
 			)
 }
+		// blinky() {
+		// 	setTimeout(() => {
+		// 	let currentState = this.state.isBlinking
+		// 	this.setState({isBlinking : !currentState})
+		// }, 700)}
 
-	blinky() {
-		setTimeout(() => {
-		let currentState = this.state.isBlinking
-		this.setState({isBlinking : !currentState})
-	}, 700)}
 
-	handleKeyPress(event){
-		if(event.key === 'Enter'){
-			this.setState(
-			{
+		handleStartClick() {
+			this.setState({
 				isGameHidden: false,
-			})
+			});
 		}
-	}
+	
 
 	exitGame() {
 		window.location.reload();

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './components/games/cash-quest/cash.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

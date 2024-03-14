@@ -43,10 +43,10 @@ class Inventory extends Component {
 						Detonator = {this.props.Detonator}
 						detonatorCurrentState = {this.props.detonatorState}
 						/>
-					<Record
+					{/* <Record
 						Record = {this.props.Record}
 					 	recordCurrentState = {this.props.recordState}
-						/>
+						/> */}
 				</StyledBox>
 			</div>
 			)

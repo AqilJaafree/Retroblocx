@@ -20,7 +20,6 @@ class PlayerHUD extends Component {
         <div>
           <div id='toggleButtons'>
             <input name='Items' className='button' type='button' value='Inventory' onClick={this.props.viewInventory} />
-            <br/>
             <input className='button' type='button' value='Equipment' onClick={this.props.viewEquip} />
             <input className='button' type='button' value='Exit Game' onClick={this.props.exitGame} />
           </div>
