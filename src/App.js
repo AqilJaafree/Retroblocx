@@ -1,21 +1,25 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Routes } from "react-router-dom";
 import "./App.css";
-import Footer from "./components/Footer/Footer";  
-import Body from "./components/Body/Body";
-import Header from "./components/Header/Header";
-import SnakeGame from "./components/games/Snakegame/SnakeGame";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from "react-router-dom";  
+import Home from "../src/components/pages/Home"
+import Snakegame from "../src/components/games/Snakegame/Snakegame";
+//navbar
+import Navbar from "./components/Navbar/Navbar";
 
-function App() {
-  return (
-    <Router>
-      <>
-        <Header />
-        <Body />
-        <Footer />
-      </>
-    </Router>
-  );
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Navbar />}>
+      <Route index element={<Home />} />
+      <Route path="Snakegame" element={<Snakegame />} />
+    </Route>
+  )
+);
+
+export default function App() {
+  return <RouterProvider router={router} />;
 }
-
-export default App;

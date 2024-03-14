@@ -1,0 +1,45 @@
+/* snake.css */
+
+/* Ensure that all elements use border-box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for the game area */
+.game-area {
+  position: relative; /* Ensure relative positioning for child elements */
+  width: 400px; /* Adjust the width of the game area as needed */
+  height: 400px; /* Adjust the height of the game area as needed */
+  margin: 0 auto; /* Center the game area horizontally */
+  background-color: #ddd; /* Add background color for better visibility */
+}
+
+/* Style for the snake */
+.snake {
+  position: absolute; /* Position the snake relative to the game area */
+  width: 20px; /* Adjust the width of the snake segments as needed */
+  height: 20px; /* Adjust the height of the snake segments as needed */
+  background-color: green; /* Set the color of the snake */
+}
+
+/* Style for the food */
+.food {
+  position: absolute; /* Position the food relative to the game area */
+  width: 20px; /* Adjust the width of the food item as needed */
+  height: 20px; /* Adjust the height of the food item as needed */
+  background-color: red; /* Set the color of the food */
+}
+
+/* Style for the buttons */
+.button-container {
+  text-align: center; /* Center the buttons horizontally */
+  margin-top: 20px; /* Add some spacing between the game area and the buttons */
+}
+
+.button {
+  margin: 5px; /* Add some spacing between the buttons */
+}

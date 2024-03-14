@@ -1,47 +1,26 @@
 import React from 'react'
 import './Body.css';
-import { Link } from "react-router-dom";
-
-
+import { NavLink } from "react-router-dom";
+import snakeapple from "../assets/snakeapple.png"
 const Body = () => {
   return (
     <div className="body">
-      <h1>Body</h1>
       <div className="image-container">
-        <a
-          href="https://example.com/page2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="image2.jpg" alt="Sample Image 2" />
-        </a>
-        <a
-          href="https://example.com/page2"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
-        <a
-          href="https://example.com/page2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="image2.jpg" alt="Sample Image 2" />
-        </a>
-        <a
-          href="https://example.com/page2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="image2.jpg" alt="Sample Image 2" />
-        </a>
-        <a
-          href="https://example.com/page2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="image2.jpg" alt="Sample Image 2" />
-        </a>
-        {/* Add more image links as needed */}
+        <NavLink to="Snakegame" className="image-navgame1">
+          <a
+            href=""
+            className="snakegame"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Snake game
+            <img
+              className="snakegame-image"
+              src={snakeapple}
+              alt="Snake game"
+            />
+          </a>
+        </NavLink>
       </div>
     </div>
   );

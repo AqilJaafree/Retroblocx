@@ -1,9 +1,14 @@
 .body {
     position: absolute;
-    top: 120px;
+    top: 175px;
     left: 0;
     width: 100%;
     text-align: center;
     background-color: rgb(3, 160, 3);
     color: white;
+}
+
+.snakegame-image{
+    width: 170px;
+
 }
