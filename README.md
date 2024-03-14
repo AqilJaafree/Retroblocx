@@ -1,9 +1,15 @@
-# Getting Started with Create React App
+# Retroblocx (Major League Hacking: Global Hack Week)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# project description
+A compilation of retro games in one project. We want to make all players to experience every eras games.
+
+# Group member:
+AqilJaafree
+adyars
+aleyamaliki
+wafiqah
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
