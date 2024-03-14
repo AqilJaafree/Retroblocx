@@ -9,6 +9,11 @@ export default function Navbar() {
         <nav className="navbar">
           <ul>
             <li>
+              <NavLink to="/">
+                <img src="../img/logo.png" alt="logo" />
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
