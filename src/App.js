@@ -7,7 +7,8 @@ import {
   Route,
 } from "react-router-dom";  
 import Home from "../src/components/pages/Home"
-import Snakegame from "../src/components/games/Snakegame/Snakegame";
+import Snakegame from "./components/games/Snakegame/Snakegame";
+import Flappygame from "./components/games/flappybird/Flappygame";
 //navbar
 import Navbar from "./components/Navbar/Navbar";
 
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Navbar />}>
       <Route index element={<Home />} />
       <Route path="Snakegame" element={<Snakegame />} />
+      <Route path="Flappybird" element={<Flappygame />} />
     </Route>
   )
 );

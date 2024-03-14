@@ -15,7 +15,7 @@ export default function Navbar() {
               <NavLink to="Snakegame">Snake Game</NavLink>
             </li>
             <li>
-              <NavLink to="about">About</NavLink>
+              <NavLink to="Flappybird">Flappy Bird</NavLink>
             </li>
           </ul>
         </nav>
